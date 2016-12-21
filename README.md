@@ -8,7 +8,7 @@ Installation: Use program that reads Python. Requires downloading Kivy for graph
 Usage: Once downloaded and saved in a specific location on computer, open terminal/command prompt
        Get to file in computer through cmd commands and open game by entering "python breakout"
        
-MIT License
+
 
 Copyright (c) [2016] [Samuel Han]
 
