@@ -1,0 +1,12 @@
+Samuel Han (sh779)
+Neha Rao(nr276)
+Date completed: 12/4/16
+
+Extensions Added: 
+1. Added user control over bounces by adding method called _determineDirection()
+This method is called in updateBall() when the paddle collides with the ball to determine
+which direction the ball moves afterwards. 
+
+2. Added sound by adding method called createSound(). This method creates a list 
+consisting of Sound objects and called in updateBall() when the ball collides with 
+the brick. 
