@@ -70,8 +70,9 @@ STATE_COMPLETE  = 5
 
 ######### NEW CONSTANTS #########
 #: color constants for constructing bricks
-BRICK_COLORS = [colormodel.RED, colormodel.ORANGE, colormodel.YELLOW,
-                colormodel.GREEN, colormodel.CYAN]
+BRICK_COLORS = [colormodel.RED, colormodel.RED, colormodel.ORANGE,
+                colormodel.ORANGE, colormodel.YELLOW, colormodel.YELLOW,
+                colormodel.GREEN, colormodel.GREEN, colormodel.CYAN, colormodel.CYAN]
 
 
 ######### COMMAND LINE ARGUMENTS TO CHANGE NUMBER OF BRICKS IN ROW #########
