@@ -164,11 +164,11 @@ class Play(object):
             self._ball.x <= self._paddle.left + self._paddle.width/4):
                 self._ball._vx = -self._ball._vx
                 self._ball._vy = -self._ball._vy
-        if (self._ball._vx < 0 and self._ball.x <= self._paddle.right and
+        elif (self._ball._vx < 0 and self._ball.x <= self._paddle.right and
             self._ball.x >= self._paddle.right - self._paddle.width/4):
                 self._ball._vx = -self._ball._vx
-                self._ball._vy = -self._ball._vy
-        if (self._ball.x > self._paddle.left + self._paddle.width/4 and
+                self._ball._vy = -self._ball._vy            
+        elif (self._ball.x > self._paddle.left + self._paddle.width/4 and
             self._ball.x < self._paddle.right - self._paddle.width/4):
                 self._ball._vy = -self._ball._vy
         
