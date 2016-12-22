@@ -162,15 +162,19 @@ class Play(object):
         """
         if (self._ball._vx > 0 and self._ball.x >= self._paddle.left and
             self._ball.x <= self._paddle.left + self._paddle.width/4):
-                self._ball._vx = -self._ball._vx
-                self._ball._vy = -self._ball._vy
+            self._ball._vx = -self._ball._vx
+            self._ball._vy = -self._ball._vy
+        elif (self._ball._vx >0 and self._ball.x > self._paddle.left + self._paddle.width/4
+              and self._ball.x <= self._paddle.right):
+            self._ball._vy = -self._ball._vy
+            
         if (self._ball._vx < 0 and self._ball.x <= self._paddle.right and
             self._ball.x >= self._paddle.right - self._paddle.width/4):
-                self._ball._vx = -self._ball._vx
-                self._ball._vy = -self._ball._vy
-        if (self._ball.x > self._paddle.left + self._paddle.width/4 and
-            self._ball.x < self._paddle.right - self._paddle.width/4):
-                self._ball._vy = -self._ball._vy
+            self._ball._vx = -self._ball._vx
+            self._ball._vy = -self._ball._vy
+        elif (self._ball._vx < 0 and self._ball.x < self._paddle.right - self._paddle.width/4
+              and self._ball.x >= self._paddle.left):
+            self._ball._vy = -self._ball._vy
         
     def _detectBounce(self):
         """This method serves as a helper method of updateBall()
@@ -199,21 +203,11 @@ class Play(object):
         color_index = 0
         for i in range(BRICKS_IN_ROW):
             for j in range(BRICK_ROWS):
-                if j%10 == 0 or j %10 == 1:
-                    color_index = 0
-                elif j%10 == 2 or j %10 == 3:
-                    color_index = 1
-                elif j%10 == 4 or j %10 == 5:
-                    color_index = 2
-                elif j%10 == 6 or j %10 == 7:
-                    color_index = 3
-                elif j%10 == 8 or j %10 == 9:
-                    color_index = 4
                 brick = Brick(left = BRICK_SEP_H/2 + hor_spacing,
                     bottom = GAME_HEIGHT - BRICK_Y_OFFSET - ver_spacing,
                     width = BRICK_WIDTH, height = BRICK_HEIGHT,
-                    linecolor = BRICK_COLORS[color_index],
-                    fillcolor = BRICK_COLORS[color_index])
+                    linecolor = BRICK_COLORS[j%len(BRICK_COLORS)],
+                    fillcolor = BRICK_COLORS[j%len(BRICK_COLORS)])
                 ver_spacing = ver_spacing + BRICK_HEIGHT + BRICK_SEP_V
                 self._bricks.append(brick)
             hor_spacing = hor_spacing + BRICK_WIDTH + BRICK_SEP_H
