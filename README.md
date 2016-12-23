@@ -3,10 +3,10 @@ Project Name: Breakout
 
 Description: Final assignment in CS 1110: Intro to Computing in Python. Simplified version of game "Breakout" made through Python. The assignment focused on basic game development that incorporated major topics in CS 1110 such as effective class use and hierarchy, algorithm design, conditionals and control flow, etc. 
 
-Installation: Use program that reads Python. Requires downloading Kivy for graphic features to work properly Download files                 into single folder- must be all together for it to work
+Installation: Use program that reads Python. Requires downloading Kivy for graphic features to work properly Download files                 into single folder- must be all together for it to work.
 
 Usage: Once downloaded and saved in a specific location on computer, open terminal/command prompt
-       Get to file in computer through cmd commands and open game by entering "python breakout"
+       Get to file in computer through cmd commands and open game by entering "python breakout".
        
 
 
